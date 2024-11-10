@@ -1,0 +1,23 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "gud-website/dist/**",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/**",
+      "use": "@vercel/node"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/api/(.*)",
+      "dest": "/api/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "gud-website/dist/index.html"
+    }
+  ]
+}
