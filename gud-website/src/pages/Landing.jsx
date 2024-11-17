@@ -73,6 +73,8 @@ function Landing() {
 
     
     return (
+   
+
         <div className={`full-container ${!isOpen ? '' : 'collapsed'}`}>
             {/* <div class="container">
                 <div class="background-image"></div>

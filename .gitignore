@@ -114,3 +114,4 @@ __snapshots__/
 
 # Generated lockfile for pnpm
 pnpm-lock.yaml
+.vercel

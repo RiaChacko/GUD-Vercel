@@ -6,18 +6,18 @@ import Officers from './pages/Officers'
 import DesignTeams from './pages/Design-Teams'
 import Gallery from './pages/Gallery'
 import Resources from './pages/Resources'
-import { BrowserRouter, Route, Routes } from "react-router-dom"
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom"
 import Footer from './components/Footer'
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
 import IndividualDesignTeam from './pages/IndividualDesignTeam';
 function App() {
 
   	return (
-    	<>
+    	
+		<Router>
 			<ToastContainer/>
       		<Navbar/>
-			<BrowserRouter>
 				<Routes>
 					<Route path='/' element={<Landing/>}/>
 					<Route path='/about' element={<About/>}/>
@@ -28,9 +28,11 @@ function App() {
 					<Route path='/resources' element={<Resources/>}/>
 					<Route path='/individual' element={<IndividualDesignTeam/>}/>
 				</Routes>
-			</BrowserRouter>
+			
 			<Footer/>
-    	</>
+		
+		</Router>
+    	
   	)
 }
 
